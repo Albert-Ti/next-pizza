@@ -1,3 +1,13 @@
+# Next Pizza.
+
+- За основу взят мой предыдущий проект [react-pizza](https://github.com/Albert-Ti/react-pizza_online-store)
+
+- Задача изучить NextJS с добавлением нового функционала и логики, и реализация бекенда.
+
+- ссылка на [новый макет:](https://www.figma.com/design/cYz4fOSK74EJoqHxoNr1hT/Next-Pizza)
+
+## Next docs:
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
