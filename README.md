@@ -6,6 +6,8 @@
 
 - ссылка на [новый макет:](https://www.figma.com/design/cYz4fOSK74EJoqHxoNr1hT/Next-Pizza)
 
+- выражаю огромную благодарность каналу: "Archackov_Blog" за предоставленный макет и видеоразбор.
+
 ## Next docs:
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
