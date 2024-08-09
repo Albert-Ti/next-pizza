@@ -1,4 +1,4 @@
-import {Categories, Container, SortPopup} from '@/components/shared'
+import {Container, TopBar} from '@/components/shared'
 import {Title} from '@/components/shared/title'
 
 export default function Home() {
@@ -6,12 +6,11 @@ export default function Home() {
     <>
       <Container className='mt-10'>
         <Title className='font-extrabold' size='lg' text={'Все пиццы'} />
-
-        <nav>
-          <Categories />
-          <SortPopup />
-        </nav>
       </Container>
+
+      <TopBar />
+
+      <div className='h-[3000px]'></div>
     </>
   )
 }
