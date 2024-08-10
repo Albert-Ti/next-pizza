@@ -1,7 +1,6 @@
 import {ArrowRight, ShoppingCart, User} from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
-import {Input} from '../ui'
 import {Button} from '../ui/button'
 import {Container} from './container'
 
@@ -11,7 +10,6 @@ export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className='border border-b'>
       <Container className='flex items-center justify-between py-8'>
-        {/* левый блок */}
         <div className='flex items-center gap-4'>
           <Image src='/logo.png' alt='Logo' width={35} height={35} />
           <div>
@@ -20,10 +18,6 @@ export const Header: React.FC<HeaderProps> = () => {
           </div>
         </div>
 
-        {/* центральный блок */}
-        {/* <Input /> */}
-
-        {/* правый блок */}
         <div className='flex items-center gap-3'>
           <Button className='flex items-center gap-3' variant='outline'>
             <User size={16} />

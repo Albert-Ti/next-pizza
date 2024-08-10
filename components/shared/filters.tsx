@@ -34,7 +34,7 @@ const ingredients = [
 
 export const Filters: React.FC = () => {
   return (
-    <div>
+    <div className='w-[250px]'>
       <Title className='mb-5 font-bold' text='Фильтрация' size='sm' />
       <div className='flex flex-col gap-4'>
         <FilterCheckbox text='Можно собирать' value='1' />
