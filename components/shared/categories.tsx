@@ -20,7 +20,7 @@ export const Categories: React.FC<Props> = ({className}) => {
           )}
           key={i}
         >
-          <Link className='font-normal' href='#'>
+          <Link className="font-normal" href="#">
             {cat}
           </Link>
         </li>
