@@ -1,11 +1,14 @@
 # Next Pizza.
 
+## Технологический стек:
+
+TypeScript, ReactJS, NextJS, TailwindCSS, NestJS, Docker.
+
+## О Проекте:
+
 - За основу взят мой предыдущий проект [react-pizza](https://github.com/Albert-Ti/react-pizza_online-store)
-
 - Задача изучить NextJS с добавлением нового функционала и логики, и реализация бекенда.
-
 - ссылка на [новый макет:](https://www.figma.com/design/cYz4fOSK74EJoqHxoNr1hT/Next-Pizza)
-
 - выражаю огромную благодарность каналу: "Archackov_Blog" за предоставленный макет и видеоразбор.
 
 ## Next docs:
