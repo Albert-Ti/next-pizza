@@ -6,6 +6,7 @@ import {observer} from '@/lib/utils'
 import {useCategoriesStore} from '../store/categories'
 
 interface Props {
+  groupId: number
   title: string
   items: any[]
   className?: string
@@ -18,10 +19,10 @@ export const ProductsGroup: React.FC<Props> = ({title, items}) => {
   React.useEffect(() => {
     const cleanup = observer(targetRef.current!, setCategoryName)
     return cleanup
-  }, [targetRef, setCategoryName])
+  }, [targetRef, setCategoryName, title])
 
   return (
-    <>
+    <section id={title}>
       <h2 ref={targetRef} className='font-bold text-[32px]'>
         {title}
       </h2>
@@ -39,6 +40,6 @@ export const ProductsGroup: React.FC<Props> = ({title, items}) => {
           </li>
         ))}
       </ul>
-    </>
+    </section>
   )
 }

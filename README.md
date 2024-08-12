@@ -2,7 +2,7 @@
 
 ## Технологический стек:
 
-TypeScript, ReactJS, NextJS, TailwindCSS, NestJS, Docker.
+TypeScript, ReactJS, NextJS, Zustand, TailwindCSS, NestJS, Docker.
 
 ## О Проекте:
 

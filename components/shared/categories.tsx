@@ -7,7 +7,16 @@ type Props = {
   className?: string
 }
 
-const cats = ['Пиццы', 'Комбо', 'Закуски', 'Коктейли', 'Кофе', 'Напитки', 'Десерты', 'Десерты']
+const cats = [
+  {id: 1, name: 'Пиццы'},
+  {id: 2, name: 'Комбо'},
+  {id: 3, name: 'Закуски'},
+  {id: 4, name: 'Коктейли'},
+  {id: 5, name: 'Кофе'},
+  {id: 6, name: 'Напитки'},
+  {id: 7, name: 'Десерты'},
+  {id: 8, name: 'Десерты'},
+]
 
 export const Categories: React.FC<Props> = ({className}) => {
   const categoryName = useCategoriesStore(state => state.categoryName)
@@ -18,12 +27,12 @@ export const Categories: React.FC<Props> = ({className}) => {
         <li
           className={cn(
             'flex items-center font-bold h-11 rounded-2xl px-5',
-            categoryName === cat && 'bg-white shadow-md shadow-gray-200 text-primary'
+            categoryName === cat.name && 'bg-white shadow-md shadow-gray-200 text-primary'
           )}
           key={i}
         >
-          <Link className='font-normal' href='#'>
-            {cat}
+          <Link className='font-normal' href={`/#${cat.name}`}>
+            {cat.name}
           </Link>
         </li>
       ))}
