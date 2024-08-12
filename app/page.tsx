@@ -5,15 +5,13 @@ import {Title} from '@/components/shared/title'
 import React from 'react'
 
 export default function Home() {
-  const [targetCategory, setTargetCategory] = React.useState('')
-
   return (
     <>
       <Container className='mt-10'>
         <Title className='font-extrabold' size='lg' text={'Все пиццы'} />
       </Container>
 
-      <TopBar targetCategory={targetCategory} />
+      <TopBar />
 
       <Container className='mt-10'>
         <div className='flex gap-[80px]'>
@@ -23,7 +21,6 @@ export default function Home() {
           {/* Список товаров */}
           <div className='flex flex-1 flex-col gap-16'>
             <ProductsGroup
-              setTargetCategory={setTargetCategory}
               title='Пиццы'
               items={[
                 {
@@ -62,7 +59,6 @@ export default function Home() {
             />
 
             <ProductsGroup
-              setTargetCategory={setTargetCategory}
               title='Закуски'
               items={[
                 {
@@ -101,7 +97,6 @@ export default function Home() {
             />
 
             <ProductsGroup
-              setTargetCategory={setTargetCategory}
               title='Напитки'
               items={[
                 {

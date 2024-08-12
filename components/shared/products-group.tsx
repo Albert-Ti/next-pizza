@@ -2,33 +2,23 @@
 
 import React from 'react'
 import {ProductCard} from './product-card'
+import {observer} from '@/lib/utils'
+import {useCategoriesStore} from '../store/categories'
 
 interface Props {
-  setTargetCategory: (value: string) => void
   title: string
   items: any[]
   className?: string
 }
 
-export const ProductsGroup: React.FC<Props> = ({title, items, setTargetCategory}) => {
-  const targetRef = React.useRef<HTMLHeadingElement>(null)
+export const ProductsGroup: React.FC<Props> = ({title, items}) => {
+  const targetRef = React.useRef(null)
+  const setCategoryName = useCategoriesStore(state => state.updateCategoryName)
 
   React.useEffect(() => {
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setTargetCategory(targetRef.current?.textContent || '')
-        } else {
-          console.log('observer off')
-        }
-      })
-    })
-    const currentTarget = targetRef.current
-    if (currentTarget) observer.observe(currentTarget)
-    return () => {
-      if (currentTarget) observer.unobserve(currentTarget)
-    }
-  }, [targetRef, setTargetCategory])
+    const cleanup = observer(targetRef.current!, setCategoryName)
+    return cleanup
+  }, [targetRef, setCategoryName])
 
   return (
     <>
